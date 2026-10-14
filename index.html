@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARMAN MESHRAM — Software Engineer in the Making</title>
+  <meta name="description" content="Portfolio of Arman Meshram — B.Tech student at Symbiosis Institute of Technology, Nagpur. Building dynamic, user-centric applications across full-stack web, AI/ML, and security.">
+  <meta property="og:title" content="ARMAN MESHRAM — Software Engineer in the Making">
+  <meta property="og:description" content="Bold code. Brighter products. Full-stack developer, AI/ML explorer, and B.Tech student.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/img/arman.jpg">
+  <!-- Favicon: orange bubble "A" -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FF6B1A' stroke='%23111' stroke-width='4'/><text x='50' y='68' font-family='Arial Black' font-size='56' fill='white' text-anchor='middle' font-weight='bold'>A</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- DECO: reusable hand-drawn SVG sprite -->
+  <svg class="deco-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="deco-sparkle" viewBox="0 0 48 48"><path d="M24 2c2.7 13.2 8.8 19.3 22 22-13.2 2.7-19.3 8.8-22 22C21.3 32.8 15.2 26.7 2 24 15.2 21.3 21.3 15.2 24 2Z" fill="currentColor" stroke="#111" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-star" viewBox="0 0 52 52"><path d="m26 3 6.5 15.8L49 20l-12.7 10.4 4 17.3L26 38.5 11.7 48l3.9-17.6L3 20l16.5-1.4L26 3Z" fill="currentColor" stroke="#111" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-squiggle" viewBox="0 0 100 40"><path d="M3 25c12-29 18 24 30-3S50 4 54 25s15 17 20-1 15-20 23-5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+    <symbol id="deco-zigzag" viewBox="0 0 100 40"><path d="m3 7 18 25 18-25 18 25 18-25 22 25" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-loop" viewBox="0 0 60 60"><path d="M31 8C8 3 6 27 22 30c18 3 26-20 14-21-16-1-28 40-5 42 13 1 20-11 19-20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+    <symbol id="deco-arrow" viewBox="0 0 80 50"><path d="M4 37C20 6 48 8 67 22M52 10l16 12-19 7" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-dots" viewBox="0 0 60 60"><path d="M10 14v12m-6-6h12M43 39v14m-7-7h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="37" cy="12" r="3" fill="currentColor"/><circle cx="18" cy="46" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="deco-burst" viewBox="0 0 80 80"><path d="m40 3 7 13 14-8 1 16 16 2-9 13 10 13-16 3-1 16-15-8-9 13-8-13-15 8-1-16-16-3 10-13-9-13 16-2 1-16 14 8 10-13Z" fill="currentColor" stroke="#111" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-smiley" viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M19 25v2m22-2v2M19 37c6 10 17 10 23 0" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/></symbol>
+    <symbol id="deco-bolt" viewBox="0 0 50 70"><path d="m29 3-24 37h17l-2 27 25-40H28l1-24Z" fill="currentColor" stroke="#111" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-code" viewBox="0 0 70 50"><path d="m22 8-16 17 16 17M48 8l16 17-16 17M41 4 29 46" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="deco-tape" viewBox="0 0 120 32"><path d="m5 5 108-2 3 23L8 29 5 5Z" fill="#FFC928" fill-opacity=".78" stroke="#111" stroke-opacity=".35" stroke-width="2"/><path d="m15 7 3 19m12-20 3 20m12-20 3 20m12-21 3 20m12-20 3 20m12-21 3 20" stroke="#111" stroke-opacity=".12" stroke-width="2"/></symbol>
+  </svg>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="ARMAN — Home">ARMAN</a>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+        <a href="assets/resume/Arman_Meshram_Resume.pdf" class="btn-resume" download>
+          <span>📄</span> Resume
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+    <a href="assets/resume/Arman_Meshram_Resume.pdf" class="btn-resume" download>📄 Resume</a>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <span class="hero-label">✨ Software Engineer in the making</span>
+          <h1 id="hero-heading" class="hero-name bubble-heading" data-name="ARMAN MESHRAM">
+            ARMAN MESHRAM
+          </h1>
+
+          <!-- DECO: small hand-drawn star beside the hero headline -->
+          <svg class="deco deco--sm deco--blue hero-name-star" aria-hidden="true"><use href="#deco-star"/></svg>
+
+          <!-- Sparkle doodles around the name -->
+          <div class="doodle doodle-sparkle doodle-parallax" data-speed="15" data-color="#FFC928" data-size="24" style="top:-10px;right:20px;" aria-hidden="true"></div>
+          <div class="doodle doodle-sparkle doodle-parallax" data-speed="10" data-color="#2F5BFF" data-size="18" style="top:40px;right:-10px;" aria-hidden="true"></div>
+          <div class="doodle doodle-sparkle doodle-parallax" data-speed="25" data-color="#FF6B1A" data-size="22" style="bottom:20px;left:10px;" aria-hidden="true"></div>
+
+          <p class="hero-tagline">Bold code. Brighter products.</p>
+          <p class="hero-blurb">Passionate software engineer building dynamic, user-centric applications across full-stack web, AI/ML, and security.</p>
+          <div class="hero-btns">
+            <a href="projects.html" class="btn btn--primary">View Projects →</a>
+            <a href="assets/resume/Arman_Meshram_Resume.pdf" class="btn btn--outline" download>Download Resume ↓</a>
+          </div>
+          <!-- DECO: small code sticker in the hero margin -->
+          <div class="code-note" aria-hidden="true"><span class="code-note__dots">● ● ●</span><code>const mood = <b>"good"</b>;</code></div>
+        </div>
+
+        <!-- Right: Photo -->
+        <div class="hero-image-wrapper">
+          <div class="hero-photo-container">
+            <!-- Blue blob behind photo -->
+            <div class="hero-blob" aria-hidden="true">
+              <svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M320 60C380 120 400 200 370 280C340 360 280 420 200 430C120 440 60 380 30 300C0 220 20 140 80 80C140 20 260 0 320 60Z" fill="#2F5BFF" opacity="0.15"/>
+                <path d="M310 80C360 130 380 200 360 270C340 340 290 400 210 410C130 420 80 370 50 300C20 230 30 160 80 100C130 40 260 30 310 80Z" fill="#A9BFF5" opacity="0.3"/>
+              </svg>
+            </div>
+
+            <!-- Photo -->
+            <div class="hero-photo">
+              <img src="assets/img/arman.jpg" alt="Arman Meshram — young man with curly dark hair and clear-frame glasses, wearing a white shirt">
+            </div>
+
+            <!-- Floating stickers -->
+            <div class="hero-sticker hero-sticker--star" aria-hidden="true">⭐ Let's build!</div>
+            <div class="hero-sticker hero-sticker--btech" aria-hidden="true">🎓 B.Tech '28</div>
+            <div class="hero-sticker hero-sticker--smiley" aria-hidden="true">😊</div>
+            <!-- DECO: photo corner accents -->
+            <svg class="deco deco--md deco--yellow deco--float hero-burst" aria-hidden="true"><use href="#deco-burst"/></svg>
+            <svg class="hero-badge-ring" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="hero-ring-path" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><circle cx="60" cy="60" r="43" fill="#F1EFE9" fill-opacity=".92" stroke="#111" stroke-width="2"/><text><textPath href="#hero-ring-path">BOLD CODE • BRIGHTER PRODUCTS • </textPath></text></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS ROW ===== -->
+    <section class="stats-row reveal-stagger" aria-label="Quick stats">
+      <div class="stat-item">
+        <div class="stat-number" data-count="7" data-suffix="">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="2" data-suffix="+">0</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="1" data-suffix="">0</div>
+        <div class="stat-label">AI/ML Internship</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">B.Tech '28</div>
+        <div class="stat-label">SIT Nagpur</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== MARQUEE STRIP ===== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>REACT</span><span>•</span>
+        <span>PYTHON</span><span>•</span>
+        <span>DJANGO</span><span>•</span>
+        <span>FASTAPI</span><span>•</span>
+        <span>ANSIBLE</span><span>•</span>
+        <span>AWS</span><span>•</span>
+        <span>AGENTIC AI</span><span>•</span>
+        <span>ML</span><span>•</span>
+        <span>REACT</span><span>•</span>
+        <span>PYTHON</span><span>•</span>
+        <span>DJANGO</span><span>•</span>
+        <span>FASTAPI</span><span>•</span>
+        <span>ANSIBLE</span><span>•</span>
+        <span>AWS</span><span>•</span>
+        <span>AGENTIC AI</span><span>•</span>
+        <span>ML</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ===== QUICK EXPLORE ===== -->
+    <section class="section" aria-labelledby="explore-heading">
+      <div class="section-header">
+        <h2 id="explore-heading" class="bubble-heading">Quick Explore</h2>
+        <div class="doodle doodle-star doodle-parallax" data-speed="12" style="top:-15px;right:calc(50% - 200px);" aria-hidden="true"></div>
+      </div>
+
+      <div class="explore-grid reveal-stagger">
+        <a href="about.html" class="explore-card sticker-card--orange">
+          <div>
+            <h3>About</h3>
+            <p>Who I am, where I study, and what drives me.</p>
+          </div>
+          <div class="card-arrow">
+            <span class="btn--icon-circle">→</span>
+          </div>
+          <span class="card-pill-label">🧑‍💻 About</span>
+        </a>
+
+        <a href="skills.html" class="explore-card sticker-card--blue">
+          <div>
+            <h3 style="color:var(--white);">Skills</h3>
+            <p style="color:rgba(255,255,255,0.85);">Tech stack, tools, and proficiency badges.</p>
+          </div>
+          <div class="card-arrow">
+            <span class="btn--icon-circle">→</span>
+          </div>
+          <span class="card-pill-label" style="background:var(--white);color:var(--ink);">💡 Skills</span>
+        </a>
+
+        <a href="projects.html" class="explore-card sticker-card--yellow">
+          <div>
+            <h3>Projects</h3>
+            <p>Blockchain, networking tools, ML pipelines & more.</p>
+          </div>
+          <div class="card-arrow">
+            <span class="btn--icon-circle">→</span>
+          </div>
+          <span class="card-pill-label">🚀 Projects</span>
+        </a>
+
+        <a href="achievements.html" class="explore-card sticker-card--orange">
+          <div>
+            <h3>Achievements</h3>
+            <p>Certifications, awards, and growth milestones.</p>
+          </div>
+          <div class="card-arrow">
+            <span class="btn--icon-circle">→</span>
+          </div>
+          <span class="card-pill-label">🏆 Certs</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== BANNER STRIP ===== -->
+    <section class="banner-strip section--full" aria-label="Motivation">
+      <h2>BUILD. BREAK. SHIP.</h2>
+      <a href="contact.html" class="talk-link">Let's talk → </a>
+
+      <!-- Doodle decorations -->
+      <div class="doodle doodle-sparkle doodle-parallax" data-speed="20" data-color="#FFC928" data-size="28" style="top:20px;left:10%;position:absolute;" aria-hidden="true"></div>
+      <div class="doodle doodle-sparkle doodle-parallax" data-speed="15" data-color="#FF6B1A" data-size="22" style="bottom:15px;right:8%;position:absolute;" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="section-header">
+        <h2 id="featured-heading" class="bubble-heading">Featured Projects</h2>
+      </div>
+
+      <div class="featured-projects reveal-stagger">
+        <!-- Project 1 -->
+        <div class="project-card sticker-card">
+          <div class="project-icon">⛓️</div>
+          <h3>Blockchain-Based E-Commerce Platform</h3>
+          <p>Django/Python backend with MetaMask integration for decentralized payments. Combining traditional web tech with blockchain workflows.</p>
+          <div class="project-status">📌 Status: In progress</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">Blockchain</span>
+            <span class="tech-tag">MetaMask</span>
+          </div>
+          <div class="project-btns" style="margin-top:16px;">
+            <a href="https://github.com/ArmanMeshram/" target="_blank" rel="noopener" class="btn btn--small btn--primary">GitHub →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card sticker-card">
+          <div class="project-icon">🔍</div>
+          <h3>NetScope: Network Traffic Analyzer</h3>
+          <p>Capture, inspect, and classify network packets with an interactive dashboard, anomaly detection, and PCAP export capabilities.</p>
+          <div class="project-status">📌 Status: In progress</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scapy</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">React.js</span>
+          </div>
+          <div class="project-btns" style="margin-top:16px;">
+            <a href="https://github.com/ArmanMeshram/" target="_blank" rel="noopener" class="btn btn--small btn--primary">GitHub →</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:32px;">
+        <a href="projects.html" class="btn btn--outline">See all projects →</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ===== MARQUEE STRIP 2 ===== -->
+    <div class="marquee-strip" aria-hidden="true" style="background:var(--periwinkle);">
+      <div class="marquee-inner" style="animation-direction:reverse;">
+        <span>FULL-STACK</span><span>•</span>
+        <span>AI/ML</span><span>•</span>
+        <span>BLOCKCHAIN</span><span>•</span>
+        <span>SECURITY</span><span>•</span>
+        <span>CLOUD</span><span>•</span>
+        <span>DEVOPS</span><span>•</span>
+        <span>OPEN SOURCE</span><span>•</span>
+        <span>FULL-STACK</span><span>•</span>
+        <span>AI/ML</span><span>•</span>
+        <span>BLOCKCHAIN</span><span>•</span>
+        <span>SECURITY</span><span>•</span>
+        <span>CLOUD</span><span>•</span>
+        <span>DEVOPS</span><span>•</span>
+        <span>OPEN SOURCE</span><span>•</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">ARMAN MESHRAM</div>
+        <p>B.Tech student at Symbiosis Institute of Technology, Nagpur. Passionate about building dynamic, user-centric applications.</p>
+        <div class="footer-doodle-text">Good code, good days. ✨</div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="footer-social-icons">
+          <a href="https://github.com/ArmanMeshram/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/arman-meshram-a5a710259" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:armanmeshram2006@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Arman Meshram. All rights reserved.</span>
+      <span>Built with ☕ and clean code.</span>
+    </div>
+  </footer>
+
+  <!-- Internship Sticker -->
+  <div class="internship-sticker" aria-label="Open to internships">
+    <span>✨ OPEN TO INTERNSHIPS ✨</span>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
