@@ -3108,3 +3108,39 @@ body.deco-off .hero-photo-container::before { display: none; }
     letter-spacing: -.025em;
   }
 }
+
+/* HOME: enlarge the portrait to make better use of the hero's open space. */
+.hero-photo-container {
+  width: clamp(360px, 38vw, 420px);
+  height: clamp(430px, 45vw, 500px);
+}
+.hero-photo {
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+}
+.hero-blob {
+  width: 116%;
+  height: 112%;
+}
+
+@media (max-width: 968px) {
+  .hero-photo-container {
+    width: clamp(340px, 48vw, 410px);
+    height: clamp(410px, 58vw, 480px);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-photo-container {
+    width: min(340px, calc(100vw - 48px));
+    height: min(410px, calc((100vw - 48px) * 1.2));
+  }
+  .hero-photo {
+    width: calc(100% - 28px);
+    height: calc(100% - 28px);
+  }
+  .hero-blob {
+    width: 112%;
+    height: 108%;
+  }
+}
