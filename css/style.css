@@ -168,27 +168,29 @@ button { cursor: none; }
   inset: 0;
   z-index: 99999;
   background: var(--orange);
-  transform: scaleY(0);
+  transform: scale3d(1, 0, 1);
   transform-origin: bottom;
   pointer-events: none;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .page-transition.active-enter {
-  animation: wipeIn 0.4s var(--ease-smooth) forwards;
+  animation: wipeIn 0.58s cubic-bezier(.76, 0, .24, 1) both;
 }
 
 .page-transition.active-exit {
-  animation: wipeOut 0.4s var(--ease-smooth) forwards;
+  animation: wipeOut 0.58s cubic-bezier(.76, 0, .24, 1) both;
 }
 
 @keyframes wipeIn {
-  0% { transform: scaleY(0); transform-origin: bottom; }
-  100% { transform: scaleY(1); transform-origin: bottom; }
+  0% { transform: scale3d(1, 0, 1); transform-origin: bottom; }
+  100% { transform: scale3d(1, 1, 1); transform-origin: bottom; }
 }
 
 @keyframes wipeOut {
-  0% { transform: scaleY(1); transform-origin: top; }
-  100% { transform: scaleY(0); transform-origin: top; }
+  0% { transform: scale3d(1, 1, 1); transform-origin: top; }
+  100% { transform: scale3d(1, 0, 1); transform-origin: top; }
 }
 
 /* ============================================================

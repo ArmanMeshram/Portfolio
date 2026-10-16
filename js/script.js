@@ -434,9 +434,13 @@ function initPageTransitions() {
         overlay.classList.remove('active-exit');
         overlay.classList.add('active-enter');
 
-        setTimeout(() => {
-          window.location.href = href;
-        }, 400);
+        const navigate = () => { window.location.href = href; };
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          navigate();
+        } else {
+          // Let the smoother wipe finish before the browser changes pages.
+          setTimeout(navigate, 580);
+        }
       });
     }
   });
